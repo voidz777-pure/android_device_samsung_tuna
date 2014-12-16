@@ -26,6 +26,12 @@ on post-fs-data
     chmod 0660 /sys/devices/tuna_otg/uart_sel
     chmod 0660 /sys/devices/tuna_otg/usb_sel
 
+    # Adaptive backlight
+    chmod 0666 /sys/class/backlight/s6e8aa0/acl_set
+
+    # Gamma
+    chmod 0666 /sys/devices/platform/omapdss/manager0/gamma
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
