@@ -28,6 +28,10 @@ $(call inherit-product-if-exists, hardware/ti/omap4/omap4.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay
 
+# Mobile Data provision prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.prov_mobiledata=false
+
 # We have 3 different variants of this device:
 # - maguro (GSM)
 # - toro (CDMA/LTE, VZW)
