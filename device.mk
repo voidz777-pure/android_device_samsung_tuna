@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
 	power.tuna \
 	sensors.tuna
 
+# old-apns.conf
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/old-apns-conf.xml:system/etc/old-apns-conf.xml
+
 # RIL
 PRODUCT_PACKAGES += \
 	libsecril-client \
